@@ -11,13 +11,13 @@ pipeline {
         stage ('Test') {
             agent any
             steps {
-                sh 'python manage.py test --junit-xml test-reports/results.xml'
+                sh 'python manage.py test'
             }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
+            //post {
+            //    always {
+            //        junit 'test-reports/results.xml'
+            //    }
+            //}
          }
     }
 }

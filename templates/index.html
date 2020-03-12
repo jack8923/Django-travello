@@ -281,6 +281,9 @@
 							</div>
 						{% endfor %}
 					</div>
+					{% if user.is_authenticated %}
+							<div style="color:blue;"	><a href="{% static 'destinations.html' %}"> Add More Destinations </a></div>
+					{% endif %}
 				</div>
 			</div>
 		</div>

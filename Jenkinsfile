@@ -14,11 +14,7 @@ pipeline {
         }
 
         stage ('Test') {
-            agent {
-                docker {
-                    image 'qnib/pytest'
-                }
-            }
+            agent any
             steps {
                 sh 'python manage.py test --junit-xml test-reports/results.xml'
             }

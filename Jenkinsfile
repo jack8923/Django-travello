@@ -18,6 +18,6 @@ pipeline {
                     junit 'test-reports/results.aml'
                 }
             }
-        }
+         }
     }
 }

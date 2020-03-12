@@ -1,18 +1,11 @@
 pipeline {
     agent none
-    stages{
-        stage ('Build') 
-            //agent {
-            //    docker {
-            //        image 'python:2-alpine'
-            //    }
-            //}
+    stages {
+        stage ('Build') {
             steps {
-                sh virtualenv venv
-                sh source venv/bin/activate
-                sh pip install -r requirements.txt
-                //sh 'source bin/activate'
-                //sh 'pip install -r requirements.txt'
+                sh 'virtualenv venv'
+                sh 'source venv/bin/activate'
+                sh 'pip install -r requirements.txt'
             }
         }
 

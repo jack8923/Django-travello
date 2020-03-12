@@ -29,7 +29,7 @@ django-bulk-update==1.1.10
 django-celery==3.1.17
 django-cors-headers==1.1.0
 django-dynamic-fixture==1.9.0
-django-event-logger==0.0.0
+django-event-logger==0.8.21
 django-extensions==1.8.1
 django-field-history==0.6.0
 django-fsm==2.4.0

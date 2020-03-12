@@ -8,8 +8,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'virtualenv venv'
-                sh 'source venv/bin/activate'
+                //sh 'virtualenv venv'
+                sh 'source bin/activate'
                 sh 'python manage.py test'
                 //sh 'pip install -r requirements.txt'
             }

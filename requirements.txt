@@ -51,7 +51,7 @@ futures==3.0.5
 fuzzywuzzy==0.17.0
 gnureadline==8.0.0
 gspread==3.1.0
-homeassistant==0.104.3
+homeassistant==0.106.6
 html5lib==0.9999999
 httplib2==0.17.0
 idna==2.8

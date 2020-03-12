@@ -11,17 +11,18 @@ pipeline {
                 sh 'source venv/bin/activate'
                 //sh 'python manage.py test'
                 sh 'pip install -r requirements.txt'
-            }
-        }
-        stage ('Test') {
-            steps {
                 sh 'python manage.py test'
             }
+        }
+        //stage ('Test') {
+            //steps {
+                
+            //}
             //post {
             //    always {
             //        junit 'test-reports/results.xml'
             //    }
             //}
-        }
+        //}
     }
 }

@@ -1,13 +1,13 @@
 pipeline {
     agent {
         docker {
-            image 'python:3-alpine'
+            image 'circleci/python:3.6'//'python:3-alpine'
         }
     }
     stages {
         stage ('Build') {
             steps {
-                sh 'virtualenv -p python venv'
+                sh 'python3 -m venv venv'
                 sh 'source venv/bin/activate'
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py test'

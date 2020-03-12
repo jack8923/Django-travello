@@ -7,11 +7,11 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
+                sh 'pip install -r requirements.txt'
                 sh 'virtualenv -p python venv'
                 sh 'source venv/bin/activate'
-                //sh 'python manage.py test'
-                sh 'pip install -r requirements.txt'
                 sh 'python manage.py test'
+              
             }
         }
         //stage ('Test') {

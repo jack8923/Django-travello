@@ -11,7 +11,12 @@ pipeline {
 
         stage ('Test') {
             steps {
-                sh 'python manage.py test'
+                sh 'python manage.py test --verbose --junit-xml test-reports/results.xml'
+            }
+            post {
+                always {
+                    junit 'test-reports/results.aml'
+                }
             }
         }
     }

@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage ('Build') {
             steps {
@@ -8,7 +8,6 @@ pipeline {
                 sh 'pip install -r requirements.txt'
             }
         }
-
         stage ('Test') {
             agent any
             steps {

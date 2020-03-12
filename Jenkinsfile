@@ -13,6 +13,6 @@ pipeline {
             steps {
                 sh 'python manage.py test'
             }
-        }
+         }
     }
 }

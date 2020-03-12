@@ -2,16 +2,14 @@ pipeline {
     agent any
     stages{
         stage ('Build') {
-            steps{
-                sh 'cd /Users/rohit.chandwani/test/'
+            steps {
                 sh 'source bin/activate'
-                sh 'cd /Users/rohit.chandwani/test/projects/telusko'
             }
         }
 
         stage ('Test') {
             steps {
-                sh 'python manage.py test --verbose --junit-xml test-reports/results.xml'
+                sh 'python manage.py test --junit-xml test-reports/results.xml'
             }
             post {
                 always {

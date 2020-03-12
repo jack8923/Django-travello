@@ -1,12 +1,11 @@
 pipeline {
-    agent none
+    agent {
+        docker {
+            image 'python:2-alpine'
+        }
+    }
     stages {
         stage ('Build') {
-            agent {
-                docker {
-                    image 'python:2-alpine'
-                }
-            }
             steps {
                 //sh 'virtualenv venv'
                 sh 'source bin/activate'
@@ -15,7 +14,6 @@ pipeline {
             }
         }
         stage ('Test') {
-            agent any
             steps {
                 sh 'python manage.py test'
             }

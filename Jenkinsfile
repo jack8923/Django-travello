@@ -10,20 +10,20 @@ pipeline {
             steps {
                 //sh 'virtualenv venv'
                 sh 'source bin/activate'
-                sh 'python manage.py test'
+                //sh 'python manage.py test'
                 //sh 'pip install -r requirements.txt'
             }
         }
-        //stage ('Test') {
+        stage ('Test') {
         //    agent any
-        //    steps {
-        //        sh 'python manage.py test'
-        //    }
+            steps {
+                sh 'python manage.py test'
+            }
             //post {
             //    always {
             //        junit 'test-reports/results.xml'
             //    }
             //}
-       //  }
+        }
     }
 }

@@ -15,10 +15,10 @@ class LoginTest(TestCase):
         user = auth.authenticate(username='test', password='test1234')
         self.assertTrue((user is not None) and user.is_authenticated)
 
-    def test_wrong_username(self):
+    def test_username(self):
         user = auth.authenticate(username='test1', password='test1234')
         self.assertFalse(user is not None and user.is_authenticated)
 
-    def test_wrong_pssword(self):
+    def test_password(self):
         user = auth.authenticate(username='test', password='test123')
         self.assertFalse(user is not None and user.is_authenticated)

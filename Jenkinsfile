@@ -19,6 +19,7 @@ pipeline {
                 sh '. venv/bin/activate'
                 sh 'python3 manage.py test'
             }
+            
             //post {
             //    always {
             //        junit 'test-reports/results.xml'

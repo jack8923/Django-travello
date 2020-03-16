@@ -22,3 +22,5 @@ class LoginTest(TestCase):
     def test_password(self):
         user = auth.authenticate(username='test', password='test123')
         self.assertFalse(user is not None and user.is_authenticated)
+
+        

@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             //image 'circleci/python:3.6'//'python:3-alpine'
-            image 'rohitchandwani/pythonimg:tagname'
+            image 'rohitchandwani/pythonimg'
         }
     }
     stages {

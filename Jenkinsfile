@@ -17,7 +17,7 @@ pipeline {
         //}
         stage ('Test') {
             steps {
-                sh '. env/bin/activate'
+                sh 'source bin/activate'
                 sh 'python manage.py test'
             }
             

@@ -2,19 +2,19 @@ pipeline {
     agent {
         docker {
             //image 'circleci/python:3.6'//'python:3-alpine'
-            image 'rohitchandwani/pythonimage:latest'
+            image 'rohitchandwani/pythonimg:tagname'
         }
     }
     stages {
-        stage ('Build') {
-            steps {
+        //stage ('Build') {
+        //    steps {
         //        sh 'python3 -m venv venv'
         //        sh '. venv/bin/activate'
         //        sh 'pip3 install --user -r requirements.txt'
                 //sh 'python manage.py test'
-                  sh 'python -m pip install Django'
-            }
-        }
+        //          sh 'python -m pip install Django'
+        //    }
+        //}
         stage ('Test') {
             steps {
         //        sh '. venv/bin/activate'

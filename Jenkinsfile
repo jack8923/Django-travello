@@ -6,18 +6,9 @@ pipeline {
         }
     }
     stages {
-        //stage ('Build') {
-        //    steps {
-        //        sh 'python3 -m venv venv'
-        //        sh '. venv/bin/activate'
-        //        sh 'pip3 install --user -r requirements.txt'
-                //sh 'python manage.py test'
-        //          sh 'python -m pip install Django'
-        //    }
-        //}
         stage ('Test') {
             steps {
-                sh 'source bin/activate'
+                //sh 'source bin/activate'
                 sh 'python manage.py test'
             }
             

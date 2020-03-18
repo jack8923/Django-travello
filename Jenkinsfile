@@ -18,7 +18,7 @@ pipeline {
         stage ('Test') {
             steps {
         //        sh '. venv/bin/activate'
-                sh 'python3 manage.py test'
+                sh 'python manage.py test'
             }
             
             //post {

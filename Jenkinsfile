@@ -9,8 +9,7 @@ pipeline {
         stage ('Test') {
             steps {
                 //sh 'source bin/activate'
-                //sh 'python manage.py test'
-                sh './manage.py --version'
+                sh 'python manage.py test'
             }
             
             //post {

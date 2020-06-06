@@ -24,7 +24,7 @@ coverage==5.0.3
 cryptography==2.8
 decorator==4.0.9
 dict.sorted==1.0.0
-Django==1.11
+Django==1.11.29
 django-bulk-update==1.1.10
 django-celery==3.1.17
 django-cors-headers==1.1.0
